@@ -1,0 +1,9 @@
+Log file created at: 2020/09/24 09:31:29
+Running on machine: KT-RJB81
+Log line format: [IWEF]yyyymmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I20200924 09:31:29.636646  8596 glog.cpp:46] First Number: 0.
+W20200924 09:31:29.636646  8596 glog.cpp:50] First Number: 1.
+E20200924 09:31:29.636646  8596 glog.cpp:54] First Number: 2.
+I20200925 09:31:53.869596  8596 glog.cpp:46] First Number: 0.
+W20200925 09:31:53.869596  8596 glog.cpp:50] First Number: 1.
+E20200925 09:31:53.869596  8596 glog.cpp:54] First Number: 2.
