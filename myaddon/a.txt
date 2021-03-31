@@ -1,0 +1,1310 @@
+==7401== Memcheck, a memory error detector
+==7401== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==7401== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==7401== Command: node index.js
+==7401== Parent PID: 1378
+==7401== 
+disInstr(arm): unhandled instruction: 0xEC510F1E
+                 cond=14(0xE) 27:20=197(0xC5) 4:4=1 3:0=14(0xE)
+==7401== valgrind: Unrecognised instruction at address 0x5bf8728.
+==7401==    at 0x5BF8728: ??? (in /usr/lib/arm-linux-gnueabihf/libcrypto.so.1.1)
+==7401== Your program just tried to execute an instruction that Valgrind
+==7401== did not recognise.  There are two possible reasons for this.
+==7401== 1. Your program has a bug and erroneously jumped to a non-code
+==7401==    location.  If you are running Memcheck and you just saw a
+==7401==    warning about a bad jump, it's probably your program's fault.
+==7401== 2. The instruction is legitimate but Valgrind doesn't handle it,
+==7401==    i.e. it's Valgrind's fault.  If you think this is the case or
+==7401==    you are not sure, please let us know and we'll try to fix it.
+==7401== Either way, Valgrind will now raise a SIGILL signal which will
+==7401== probably kill your program.
+==7401== Invalid read of size 8
+==7401==    at 0x48661DC: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401==  Address 0x7fe4360 is 24 bytes inside a block of size 26 alloc'd
+==7401==    at 0x4847690: malloc (vg_replace_malloc.c:309)
+==7401==    by 0x5B3B9B3: uv_setup_args (in /usr/lib/arm-linux-gnueabihf/libuv.so.1.0.0)
+==7401== 
+==7401== Invalid read of size 8
+==7401==    at 0x4864B60: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401==  Address 0x7fe435c is 20 bytes inside a block of size 26 alloc'd
+==7401==    at 0x4847690: malloc (vg_replace_malloc.c:309)
+==7401==    by 0x5B3B9B3: uv_setup_args (in /usr/lib/arm-linux-gnueabihf/libuv.so.1.0.0)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x4866210: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x48662DC: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5270374: v8::internal::Factory::InternalizeOneByteString(v8::internal::Vector<unsigned char const>) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x52703D0: v8::internal::Factory::InternalizeOneByteString(v8::internal::Vector<unsigned char const>) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x52704B8: v8::internal::Factory::InternalizeOneByteString(v8::internal::Vector<unsigned char const>) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x52704E0: v8::internal::Factory::InternalizeOneByteString(v8::internal::Vector<unsigned char const>) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x538A5F0: v8::internal::StringHasher::GetHashField() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x538A5FC: v8::internal::StringHasher::GetHashField() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5270A40: v8::internal::Factory::AllocateRawOneByteInternalizedString(int, unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x526E824: v8::internal::PagedSpace::AllocateRaw(int, v8::internal::AllocationAlignment) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x38BD7008: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x38BD7010: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x38BD7018: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x38BD7024: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x38BD70A0: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x38BD70B4: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x38BD70C8: ???
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x38BD70E4: ???
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x38BD70E8: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5389EBC: v8::internal::String::IsOneByteEqualTo(v8::internal::Vector<unsigned char const>) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x48634E4: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x48634FC: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x4863518: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x4863528: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x486353C: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x486356C: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x486360C: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x486362C: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x4863674: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x4863678: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x4863690: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x486369C: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x48636AC: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x48636B8: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x52A1904: v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x526EF3C: v8::internal::Factory::AllocateRawWithImmortalMap(int, v8::internal::PretenureFlag, v8::internal::Map*, v8::internal::AllocationAlignment) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x52672A8: v8::internal::CanonicalHandleScope::Lookup(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x52672B4: v8::internal::CanonicalHandleScope::Lookup(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x52672BC: v8::internal::CanonicalHandleScope::Lookup(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x52672DC: v8::internal::CanonicalHandleScope::Lookup(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x52672C4: v8::internal::CanonicalHandleScope::Lookup(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x52672CC: v8::internal::CanonicalHandleScope::Lookup(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304DE4: v8::internal::IdentityMapBase::Hash(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304E50: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x5304E5C: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304E64: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x53051E4: v8::internal::IdentityMapBase::InsertKey(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x53051EC: v8::internal::IdentityMapBase::InsertKey(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x5305240: v8::internal::IdentityMapBase::InsertKey(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x52672F8: v8::internal::CanonicalHandleScope::Lookup(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x5267328: v8::internal::CanonicalHandleScope::Lookup(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x5270AC0: v8::internal::Factory::AllocateRawOneByteInternalizedString(int, unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x5270AC8: v8::internal::Factory::AllocateRawOneByteInternalizedString(int, unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x4EFD668: v8::internal::FixedArray::set(int, v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304E6C: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x53051F4: v8::internal::IdentityMapBase::InsertKey(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x53050F8: v8::internal::IdentityMapBase::Resize(int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x530510C: v8::internal::IdentityMapBase::Resize(int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x538F74C: v8::internal::Code::CopyFromNoFlush(v8::internal::CodeDesc const&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x38BD70BC: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304E80: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304E88: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5393BA4: v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::FindEntry(v8::internal::Isolate*, v8::internal::StringTableKey*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5393B60: v8::internal::HashTable<v8::internal::StringTable, v8::internal::StringTableShape>::FindEntry(v8::internal::Isolate*, v8::internal::StringTableKey*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x5389E98: v8::internal::String::IsOneByteEqualTo(v8::internal::Vector<unsigned char const>) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x5388FB8: v8::internal::String::GetFlatContent() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x48634E8: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x4863508: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x4863530: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x486367C: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x53057F4: v8::internal::IdentityMapBase::LookupOrInsert(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x38BD70A8: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304EAC: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304EB4: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x38BD7094: ???
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x4863540: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304E94: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304E9C: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x53051FC: v8::internal::IdentityMapBase::InsertKey(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5305208: v8::internal::IdentityMapBase::InsertKey(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x38BD7110: ???
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x48637F8: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x4863A24: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x38BD70D0: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5305210: v8::internal::IdentityMapBase::InsertKey(v8::internal::Object*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x4863A00: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304EC8: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304ED0: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5304EDC: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x5304E78: v8::internal::IdentityMapBase::ScanKeysFor(v8::internal::Object*) const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x38BD70FC: ???
+==7401== 
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x38BD7108: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x52703D8: v8::internal::Factory::InternalizeOneByteString(v8::internal::Vector<unsigned char const>) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x48662D4: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x38BD70F4: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x38BD7104: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x38BD710C: ???
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x48662E4: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== 
+==7401== More than 100 errors detected.  Subsequent errors
+==7401== will still be recorded, but in less detail than before.
+==7401== Use of uninitialised value of size 4
+==7401==    at 0x48636B0: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so)
+==7401== 
+==7401== Conditional jump or move depends on uninitialised value(s)
+==7401==    at 0x5275E0C: v8::internal::Factory::LookupSingleCharacterStringFromCode(unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 
+==7401== Process terminating with default action of signal 2 (SIGINT)
+==7401==    at 0x7E361A4: futex_wait_cancelable (futex-internal.h:88)
+==7401==    by 0x7E361A4: __pthread_cond_wait_common (pthread_cond_wait.c:502)
+==7401==    by 0x7E361A4: pthread_cond_wait@@GLIBC_2.4 (pthread_cond_wait.c:655)
+==7401==    by 0x5B37417: uv_cond_wait (in /usr/lib/arm-linux-gnueabihf/libuv.so.1.0.0)
+==7401== 
+==7401== HEAP SUMMARY:
+==7401==     in use at exit: 584,603 bytes in 1,361 blocks
+==7401==   total heap usage: 224,175 allocs, 222,814 frees, 129,989,722 bytes allocated
+==7401== 
+==7401== 4 bytes in 1 blocks are still reachable in loss record 1 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DC1F8B: node::BackgroundTaskRunner::BackgroundTaskRunner(int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4 bytes in 1 blocks are still reachable in loss record 2 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x557FA3F: v8::tracing::TracingCategoryObserver::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4 bytes in 1 blocks are still reachable in loss record 3 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x56AC173: v8::sampler::Sampler::Sampler(v8::Isolate*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4 bytes in 1 blocks are still reachable in loss record 4 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A20E3: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4 bytes in 1 blocks are still reachable in loss record 5 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52E569B: void std::vector<v8::internal::AllocationObserver*, std::allocator<v8::internal::AllocationObserver*> >::_M_realloc_insert<v8::internal::AllocationObserver* const&>(__gnu_cxx::__normal_iterator<v8::internal::AllocationObserver**, std::vector<v8::internal::AllocationObserver*, std::allocator<v8::internal::AllocationObserver*> > >, v8::internal::AllocationObserver* const&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4 bytes in 1 blocks are still reachable in loss record 6 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4F1C973: void std::vector<v8::internal::Object**, std::allocator<v8::internal::Object**> >::_M_realloc_insert<v8::internal::Object** const&>(__gnu_cxx::__normal_iterator<v8::internal::Object***, std::vector<v8::internal::Object**, std::allocator<v8::internal::Object**> > >, v8::internal::Object** const&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4 bytes in 1 blocks are still reachable in loss record 7 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4F2BCFB: void std::vector<v8::internal::Object*, std::allocator<v8::internal::Object*> >::_M_realloc_insert<v8::internal::Object*>(__gnu_cxx::__normal_iterator<v8::internal::Object**, std::vector<v8::internal::Object*, std::allocator<v8::internal::Object*> > >, v8::internal::Object*&&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4 bytes in 1 blocks are still reachable in loss record 8 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5266F57: v8::internal::CanonicalHandleScope::CanonicalHandleScope(v8::internal::Isolate*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 9 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D47AF3: node::Start(int, char**) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 10 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E0C3: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 11 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E0F7: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 12 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E123: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 13 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E14F: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 14 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E17B: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 15 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E1A7: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 16 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E1D3: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 17 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E1FF: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 18 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E22B: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 19 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E257: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 20 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E283: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 21 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E2AF: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 22 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E2DB: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 23 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E307: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 24 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E333: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 25 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E35F: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 26 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E38B: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 27 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E3B7: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 28 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E3E3: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 29 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E40F: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 30 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E43B: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 31 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x523E467: v8::internal::ElementsAccessor::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 32 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D41E2B: node::CreateArrayBufferAllocator() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 33 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A213B: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 8 bytes in 1 blocks are still reachable in loss record 34 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5347B93: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 12 bytes in 1 blocks are still reachable in loss record 35 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x53480D7: v8::internal::Isolate::ThreadDataTable::Insert(v8::internal::Isolate::PerIsolateThreadData*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 12 bytes in 1 blocks are still reachable in loss record 36 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5267207: v8::internal::HandleScope::Extend(v8::internal::Isolate*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 1 blocks are still reachable in loss record 37 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D4967F: node::PerProcessOptions::PerProcessOptions() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 1 blocks are still reachable in loss record 38 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5347FB3: v8::internal::Isolate::ThreadDataTable::Insert(v8::internal::Isolate::PerIsolateThreadData*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 1 blocks are still reachable in loss record 39 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5348337: v8::internal::Isolate::Enter() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 1 blocks are still reachable in loss record 40 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5344393: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 1 blocks are still reachable in loss record 41 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5344423: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 1 blocks are still reachable in loss record 42 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5344443: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 1 blocks are still reachable in loss record 43 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x54544E3: v8::internal::HeapObjectsMap::HeapObjectsMap(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 1 blocks are still reachable in loss record 44 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5450BCF: v8::internal::HeapProfiler::HeapProfiler(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 1 blocks are still reachable in loss record 45 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A219F: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 1 blocks are still reachable in loss record 46 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4EF63A7: v8::internal::RootIndexMap::RootIndexMap(v8::internal::Isolate*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 1 blocks are still reachable in loss record 47 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x51D1183: void std::vector<v8::internal::Zone*, std::allocator<v8::internal::Zone*> >::_M_realloc_insert<v8::internal::Zone* const&>(__gnu_cxx::__normal_iterator<v8::internal::Zone**, std::vector<v8::internal::Zone*, std::allocator<v8::internal::Zone*> > >, v8::internal::Zone* const&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 2 blocks are still reachable in loss record 48 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52E9033: v8::internal::MemoryAllocator::AllocateChunk(unsigned int, unsigned int, v8::internal::Executability, v8::internal::Space*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16 bytes in 4 blocks are still reachable in loss record 49 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DC2083: node::BackgroundTaskRunner::BackgroundTaskRunner(int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 20 bytes in 1 blocks are still reachable in loss record 50 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A2157: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 20 bytes in 1 blocks are still reachable in loss record 51 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5346C63: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 21 bytes in 1 blocks are still reachable in loss record 52 of 231
+==7401==    at 0x4848728: operator new[](unsigned int) (vg_replace_malloc.c:427)
+==7401==    by 0x53EA593: v8::internal::OptimizedCompilationInfo::GetDebugName() const (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 24 bytes in 1 blocks are still reachable in loss record 53 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4E871A3: v8::platform::tracing::TracingController::Initialize(v8::platform::tracing::TraceBuffer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 24 bytes in 1 blocks are still reachable in loss record 54 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x56AC0BF: v8::sampler::Sampler::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 24 bytes in 1 blocks are still reachable in loss record 55 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x55879EB: v8::internal::ThreadManager::ThreadManager() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 24 bytes in 1 blocks are still reachable in loss record 56 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5587A03: v8::internal::ThreadManager::ThreadManager() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 24 bytes in 1 blocks are still reachable in loss record 57 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x534829B: v8::internal::Isolate::FindOrAllocatePerThreadDataForThisThread() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 24 bytes in 1 blocks are still reachable in loss record 58 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x534089B: v8::internal::Isolate::random_number_generator() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 24 bytes in 1 blocks are still reachable in loss record 59 of 231
+==7401==    at 0x4848728: operator new[](unsigned int) (vg_replace_malloc.c:427)
+==7401==    by 0x521583B: v8::base::LazyInstanceImpl<v8::internal::ElementsKind*, v8::base::StaticallyAllocatedInstanceTrait<v8::internal::ElementsKind*>, v8::internal::InitializeFastElementsKindSequence, v8::base::ThreadSafeInitOnceTrait, v8::base::LeakyInstanceTrait<v8::internal::ElementsKind*> >::InitInstance(void*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 24 bytes in 2 blocks are still reachable in loss record 60 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5290803: v8::internal::Heap::RegisterStrongRoots(v8::internal::Object**, v8::internal::Object**) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 24 bytes in 3 blocks are still reachable in loss record 61 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4E87CAB: v8::platform::tracing::TracingController::AddTraceStateObserver(v8::TracingController::TraceStateObserver*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 26 bytes in 1 blocks are still reachable in loss record 62 of 231
+==7401==    at 0x4847690: malloc (vg_replace_malloc.c:309)
+==7401==    by 0x5B3B9B3: uv_setup_args (in /usr/lib/arm-linux-gnueabihf/libuv.so.1.0.0)
+==7401== 
+==7401== 28 bytes in 1 blocks are still reachable in loss record 63 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4E870F7: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 28 bytes in 1 blocks are still reachable in loss record 64 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x56ABA5F: v8::base::Thread::Thread(v8::base::Thread::Options const&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 32 bytes in 1 blocks are still reachable in loss record 65 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DC457F: void std::vector<std::unique_ptr<unsigned long, std::default_delete<unsigned long> >, std::allocator<std::unique_ptr<unsigned long, std::default_delete<unsigned long> > > >::_M_realloc_insert<std::unique_ptr<unsigned long, std::default_delete<unsigned long> > >(__gnu_cxx::__normal_iterator<std::unique_ptr<unsigned long, std::default_delete<unsigned long> >*, std::vector<std::unique_ptr<unsigned long, std::default_delete<unsigned long> >, std::allocator<std::unique_ptr<unsigned long, std::default_delete<unsigned long> > > > >, std::unique_ptr<unsigned long, std::default_delete<unsigned long> >&&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 32 bytes in 1 blocks are still reachable in loss record 66 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x534879B: v8::internal::Isolate::Isolate() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 32 bytes in 1 blocks are still reachable in loss record 67 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x534437F: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 32 bytes in 1 blocks are still reachable in loss record 68 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52E6F0B: std::_Deque_base<v8::internal::TypedSlotSet::Chunk*, std::allocator<v8::internal::TypedSlotSet::Chunk*> >::_M_initialize_map(unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 36 bytes in 1 blocks are still reachable in loss record 69 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D496D7: node::PerProcessOptions::PerProcessOptions() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 36 bytes in 1 blocks are still reachable in loss record 70 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4F69D73: v8::internal::Bootstrapper::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 36 bytes in 1 blocks are still reachable in loss record 71 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4F69E6B: v8::internal::Bootstrapper::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 36 bytes in 1 blocks are still reachable in loss record 72 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4F69EBB: v8::internal::Bootstrapper::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 36 bytes in 1 blocks are still reachable in loss record 73 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4F69F0B: v8::internal::Bootstrapper::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 36 bytes in 1 blocks are still reachable in loss record 74 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4F69F5B: v8::internal::Bootstrapper::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 40 bytes in 1 blocks are still reachable in loss record 75 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D4972F: node::PerProcessOptions::PerProcessOptions() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 40 bytes in 1 blocks are still reachable in loss record 76 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D497DF: node::PerProcessOptions::PerProcessOptions() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 40 bytes in 1 blocks are still reachable in loss record 77 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D4982F: node::PerProcessOptions::PerProcessOptions() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 40 bytes in 1 blocks are still reachable in loss record 78 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4CFEFAF: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 40 bytes in 1 blocks are still reachable in loss record 79 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x536CDD3: v8::internal::Logger::SetUp(v8::internal::Isolate*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 40 bytes in 1 blocks are still reachable in loss record 80 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A20BF: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 40 bytes in 1 blocks are still reachable in loss record 81 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x534456B: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 44 bytes in 1 blocks are still reachable in loss record 82 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DAEB63: node::options_parser::DebugOptionsParser::DebugOptionsParser() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 44 bytes in 1 blocks are still reachable in loss record 83 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DAFEC7: node::options_parser::EnvironmentOptionsParser::EnvironmentOptionsParser() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 44 bytes in 1 blocks are still reachable in loss record 84 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DADA77: node::options_parser::PerIsolateOptionsParser::PerIsolateOptionsParser() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 44 bytes in 1 blocks are still reachable in loss record 85 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DAE113: node::options_parser::PerProcessOptionsParser::PerProcessOptionsParser() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 44 bytes in 1 blocks are still reachable in loss record 86 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DAE22F: node::options_parser::PerProcessOptionsParser::PerProcessOptionsParser() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 44 bytes in 1 blocks are still reachable in loss record 87 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DAE397: node::options_parser::PerProcessOptionsParser::PerProcessOptionsParser() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 44 bytes in 1 blocks are still reachable in loss record 88 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5348A23: v8::internal::Isolate::Isolate() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 44 bytes in 1 blocks are still reachable in loss record 89 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5266F73: v8::internal::CanonicalHandleScope::CanonicalHandleScope(v8::internal::Isolate*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 48 bytes in 1 blocks are still reachable in loss record 90 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D4798B: node::Start(int, char**) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 48 bytes in 1 blocks are still reachable in loss record 91 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4E09687: node::tracing::Agent::Agent() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 48 bytes in 1 blocks are still reachable in loss record 92 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x53488F7: v8::internal::Isolate::Isolate() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 48 bytes in 1 blocks are still reachable in loss record 93 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5450BA7: v8::internal::HeapProfiler::HeapProfiler(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 48 bytes in 1 blocks are still reachable in loss record 94 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x536CD9B: v8::internal::Logger::SetUp(v8::internal::Isolate*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 48 bytes in 6 blocks are still reachable in loss record 95 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4EFE8BB: v8::RegisterExtension(v8::Extension*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 52 bytes in 1 blocks are still reachable in loss record 96 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x534872F: v8::internal::Isolate::Isolate() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 52 bytes in 1 blocks are still reachable in loss record 97 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5344367: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 56 bytes in 1 blocks are still reachable in loss record 98 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x51DD217: v8::internal::DateCache::DateCache() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 56 bytes in 1 blocks are still reachable in loss record 99 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A20F7: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 60 bytes in 3 blocks are still reachable in loss record 100 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB953F: void node::options_parser::OptionsParser<node::EnvironmentOptions>::Insert<node::DebugOptions>(node::options_parser::OptionsParser<node::DebugOptions>*, node::DebugOptions* (node::EnvironmentOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 60 bytes in 3 blocks are still reachable in loss record 101 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB708B: void node::options_parser::OptionsParser<node::PerIsolateOptions>::Insert<node::EnvironmentOptions>(node::options_parser::OptionsParser<node::EnvironmentOptions>*, node::EnvironmentOptions* (node::PerIsolateOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 64 bytes in 1 blocks are still reachable in loss record 102 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52E4FF3: v8::internal::MemoryAllocator::SetUp(unsigned int, unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 64 bytes in 2 blocks are still reachable in loss record 103 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DC55DB: std::_Deque_base<std::unique_ptr<v8::Task, std::default_delete<v8::Task> >, std::allocator<std::unique_ptr<v8::Task, std::default_delete<v8::Task> > > >::_M_initialize_map(unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 64 bytes in 2 blocks are still reachable in loss record 104 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52E101B: v8::internal::MemoryChunk::AllocateLocalTracker() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 68 bytes in 1 blocks are still reachable in loss record 105 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D47BCF: node::Start(int, char**) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 69 bytes in 3 blocks are still reachable in loss record 106 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D2C7BF: void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char*>(char*, char*, std::forward_iterator_tag) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 72 bytes in 1 blocks are still reachable in loss record 107 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x534426B: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 72 bytes in 1 blocks are still reachable in loss record 108 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x53443AB: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 72 bytes in 1 blocks are still reachable in loss record 109 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52E6F9F: v8::internal::TypedSlotSet* v8::internal::MemoryChunk::AllocateTypedSlotSet<(v8::internal::RememberedSetType)0>() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 76 bytes in 1 blocks are still reachable in loss record 110 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5035D03: v8::internal::compiler::CodeAssemblerState::CodeAssemblerState(v8::internal::Isolate*, v8::internal::Zone*, v8::internal::compiler::CallDescriptor*, v8::internal::Code::Kind, char const*, v8::internal::PoisoningMitigationLevel, unsigned int, int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 80 bytes in 4 blocks are still reachable in loss record 111 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB73DB: void node::options_parser::OptionsParser<node::PerIsolateOptions>::Insert<node::EnvironmentOptions>(node::options_parser::OptionsParser<node::EnvironmentOptions>*, node::EnvironmentOptions* (node::PerIsolateOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 80 bytes in 4 blocks are still reachable in loss record 112 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB816B: void node::options_parser::OptionsParser<node::PerProcessOptions>::Insert<node::PerIsolateOptions>(node::options_parser::OptionsParser<node::PerIsolateOptions>*, node::PerIsolateOptions* (node::PerProcessOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 80 bytes in 4 blocks are still reachable in loss record 113 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DC2063: node::BackgroundTaskRunner::BackgroundTaskRunner(int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 84 bytes in 1 blocks are still reachable in loss record 114 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4F69DEF: v8::internal::Bootstrapper::InitializeOncePerProcess() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 84 bytes in 1 blocks are still reachable in loss record 115 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A1D17: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 88 bytes in 1 blocks are still reachable in loss record 116 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x53444B7: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 96 bytes in 1 blocks are still reachable in loss record 117 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x533F42F: v8::internal::Isolate::InitializeLoggingAndCounters() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 96 bytes in 1 blocks are still reachable in loss record 118 of 231
+==7401==    at 0x4847690: malloc (vg_replace_malloc.c:309)
+==7401==    by 0x545292B: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 96 bytes in 1 blocks are still reachable in loss record 119 of 231
+==7401==    at 0x4847690: malloc (vg_replace_malloc.c:309)
+==7401==    by 0x5471F47: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 96 bytes in 3 blocks are still reachable in loss record 120 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B339B: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 100 bytes in 5 blocks are still reachable in loss record 121 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB7E63: void node::options_parser::OptionsParser<node::PerProcessOptions>::Insert<node::PerIsolateOptions>(node::options_parser::OptionsParser<node::PerIsolateOptions>*, node::PerIsolateOptions* (node::PerProcessOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 104 bytes in 1 blocks are still reachable in loss record 122 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5348A0B: v8::internal::Isolate::Isolate() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 104 bytes in 1 blocks are still reachable in loss record 123 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A1D47: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 116 bytes in 1 blocks are still reachable in loss record 124 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5348A5F: v8::internal::Isolate::Isolate() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 120 bytes in 1 blocks are still reachable in loss record 125 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x534886B: v8::internal::Isolate::Isolate() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 120 bytes in 1 blocks are still reachable in loss record 126 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x500FB4B: v8::internal::CompilerDispatcher::CompilerDispatcher(v8::internal::Isolate*, v8::Platform*, unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 120 bytes in 3 blocks are still reachable in loss record 127 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB958B: void node::options_parser::OptionsParser<node::EnvironmentOptions>::Insert<node::DebugOptions>(node::options_parser::OptionsParser<node::DebugOptions>*, node::DebugOptions* (node::EnvironmentOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 120 bytes in 6 blocks are still reachable in loss record 128 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB9127: void node::options_parser::OptionsParser<node::EnvironmentOptions>::Insert<node::DebugOptions>(node::options_parser::OptionsParser<node::DebugOptions>*, node::DebugOptions* (node::EnvironmentOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 128 bytes in 1 blocks are still reachable in loss record 129 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5344587: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 132 bytes in 3 blocks are still reachable in loss record 130 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB8B6B: node::options_parser::OptionsParser<node::DebugOptions>::Implies(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 132 bytes in 3 blocks are still reachable in loss record 131 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB54DB: node::options_parser::OptionsParser<node::EnvironmentOptions>::AddOption(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > node::EnvironmentOptions::*, node::options_parser::OptionEnvvarSettings) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 136 bytes in 1 blocks are still reachable in loss record 132 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D496AF: node::PerProcessOptions::PerProcessOptions() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 144 bytes in 4 blocks are still reachable in loss record 133 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x51D126F: v8::internal::compiler::ZoneStats::NewEmptyZone(char const*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 160 bytes in 4 blocks are still reachable in loss record 134 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB742F: void node::options_parser::OptionsParser<node::PerIsolateOptions>::Insert<node::EnvironmentOptions>(node::options_parser::OptionsParser<node::EnvironmentOptions>*, node::EnvironmentOptions* (node::PerIsolateOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 160 bytes in 4 blocks are still reachable in loss record 135 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB81B7: void node::options_parser::OptionsParser<node::PerProcessOptions>::Insert<node::PerIsolateOptions>(node::options_parser::OptionsParser<node::PerIsolateOptions>*, node::PerIsolateOptions* (node::PerProcessOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 168 bytes in 7 blocks are still reachable in loss record 136 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52E011B: v8::internal::MemoryChunk::Initialize(v8::internal::Heap*, unsigned int, unsigned int, unsigned int, unsigned int, v8::internal::Executability, v8::internal::Space*, v8::internal::VirtualMemory*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 168 bytes in 7 blocks are still reachable in loss record 137 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52E0133: v8::internal::MemoryChunk::Initialize(v8::internal::Heap*, unsigned int, unsigned int, unsigned int, unsigned int, v8::internal::Executability, v8::internal::Space*, v8::internal::VirtualMemory*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 176 bytes in 4 blocks are still reachable in loss record 138 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DAF2EF: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 176 bytes in 4 blocks are still reachable in loss record 139 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB72B3: void node::options_parser::OptionsParser<node::PerIsolateOptions>::Insert<node::EnvironmentOptions>(node::options_parser::OptionsParser<node::EnvironmentOptions>*, node::EnvironmentOptions* (node::PerIsolateOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 184 bytes in 2 blocks are still reachable in loss record 140 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x5B8474F: nghttp2_session_callbacks_new (in /usr/lib/arm-linux-gnueabihf/libnghttp2.so.14.17.1)
+==7401== 
+==7401== 200 bytes in 1 blocks are still reachable in loss record 141 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4CFEF6F: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 200 bytes in 1 blocks are still reachable in loss record 142 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A1CCF: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 216 bytes in 1 blocks are still reachable in loss record 143 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x536CD2B: v8::internal::Logger::SetUp(v8::internal::Isolate*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 216 bytes in 9 blocks are still reachable in loss record 144 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB3E0B: void std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_assign_aux<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::forward_iterator_tag) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 220 bytes in 5 blocks are still reachable in loss record 145 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB4E33: node::options_parser::OptionsParser<node::DebugOptions>::AddOption(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool node::DebugOptions::*, node::options_parser::OptionEnvvarSettings) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 225 bytes in 6 blocks are still reachable in loss record 146 of 231
+==7401==    at 0x4847690: malloc (vg_replace_malloc.c:309)
+==7401==    by 0x7ECA563: strdup (strdup.c:42)
+==7401==    by 0x4E873DF: v8::platform::tracing::TracingController::GetCategoryGroupEnabledInternal(char const*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 240 bytes in 6 blocks are still reachable in loss record 147 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB9183: void node::options_parser::OptionsParser<node::EnvironmentOptions>::Insert<node::DebugOptions>(node::options_parser::OptionsParser<node::DebugOptions>*, node::DebugOptions* (node::EnvironmentOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 256 bytes in 3 blocks are still reachable in loss record 148 of 231
+==7401==    at 0x4847598: malloc (vg_replace_malloc.c:308)
+==7401==    by 0x484A55F: realloc (vg_replace_malloc.c:836)
+==7401==    by 0x5B2C66F: uv__io_start (in /usr/lib/arm-linux-gnueabihf/libuv.so.1.0.0)
+==7401== 
+==7401== 264 bytes in 1 blocks are still reachable in loss record 149 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x53444EF: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 264 bytes in 6 blocks are still reachable in loss record 150 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB5A57: node::options_parser::OptionsParser<node::PerProcessOptions>::AddOption(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > node::PerProcessOptions::*, node::options_parser::OptionEnvvarSettings) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 264 bytes in 6 blocks are still reachable in loss record 151 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DADDA3: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 296 bytes in 1 blocks are still reachable in loss record 152 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B330F: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 312 bytes in 1 blocks are still reachable in loss record 153 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DC21DB: node::NodePlatform::NodePlatform(int, node::tracing::TracingController*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 352 bytes in 8 blocks are still reachable in loss record 154 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB5B83: node::options_parser::OptionsParser<node::PerProcessOptions>::AddOption(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool node::PerProcessOptions::*, node::options_parser::OptionEnvvarSettings) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 369 bytes in 2 blocks are still reachable in loss record 155 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D0EA4F: void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 376 bytes in 1 blocks are still reachable in loss record 156 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x500FB2F: v8::internal::CompilerDispatcher::CompilerDispatcher(v8::internal::Isolate*, v8::Platform*, unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 384 bytes in 8 blocks are still reachable in loss record 157 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D3DB8B: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::operator=(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 432 bytes in 6 blocks are still reachable in loss record 158 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB4AE3: std::pair<std::__detail::_Node_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::DebugOptions>::OptionInfo>, false, true>, bool> std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::DebugOptions>::OptionInfo>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::DebugOptions>::OptionInfo> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_emplace<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, node::options_parser::OptionsParser<node::DebugOptions>::OptionInfo>(std::integral_constant<bool, true>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, node::options_parser::OptionsParser<node::DebugOptions>::OptionInfo&&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 512 bytes in 1 blocks are still reachable in loss record 159 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x53487BB: v8::internal::Isolate::Isolate() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 512 bytes in 1 blocks are still reachable in loss record 160 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52E6F3F: std::_Deque_base<v8::internal::TypedSlotSet::Chunk*, std::allocator<v8::internal::TypedSlotSet::Chunk*> >::_M_initialize_map(unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 512 bytes in 2 blocks are still reachable in loss record 161 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52E4C2F: std::vector<v8::internal::MemoryChunk*, std::allocator<v8::internal::MemoryChunk*> >::reserve(unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 512 bytes in 2 blocks are still reachable in loss record 162 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x526E787: v8::internal::PagedSpace::AllocateRawUnaligned(int, v8::internal::PagedSpace::UpdateSkipList) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 163 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4CFF58F: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 164 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4CFF93B: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 165 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4CFFD3B: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 166 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4D0013B: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 167 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4D00987: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 168 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4D00D0B: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 169 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4D0108B: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 170 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4D0140B: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 171 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4D01793: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 172 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4D01B1F: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 173 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4D01E9F: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 520 bytes in 1 blocks are still reachable in loss record 174 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x7E819DF: __new_exitfn (cxa_atexit.c:110)
+==7401==    by 0x7E81A5B: __internal_atexit (cxa_atexit.c:40)
+==7401==    by 0x4D02227: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 568 bytes in 1 blocks are still reachable in loss record 175 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x534445B: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 600 bytes in 30 blocks are still reachable in loss record 176 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB6F7B: void node::options_parser::OptionsParser<node::PerIsolateOptions>::Insert<node::EnvironmentOptions>(node::options_parser::OptionsParser<node::EnvironmentOptions>*, node::EnvironmentOptions* (node::PerIsolateOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 680 bytes in 34 blocks are still reachable in loss record 177 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB7D53: void node::options_parser::OptionsParser<node::PerProcessOptions>::Insert<node::PerIsolateOptions>(node::options_parser::OptionsParser<node::PerIsolateOptions>*, node::PerIsolateOptions* (node::PerProcessOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 728 bytes in 1 blocks are still reachable in loss record 178 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4D47A9B: node::Start(int, char**) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 748 bytes in 17 blocks are still reachable in loss record 179 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB42DB: std::__detail::_Map_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>, true>::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 760 bytes in 1 blocks are still reachable in loss record 180 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DC1E7B: node::BackgroundTaskRunner::BackgroundTaskRunner(int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 760 bytes in 5 blocks are possibly lost in loss record 181 of 231
+==7401==    at 0x484A2B0: calloc (vg_replace_malloc.c:762)
+==7401==    by 0x40126C7: allocate_dtv (dl-tls.c:286)
+==7401==    by 0x401300F: _dl_allocate_tls (dl-tls.c:532)
+==7401==    by 0x7E301AB: allocate_stack (allocatestack.c:621)
+==7401==    by 0x7E301AB: pthread_create@@GLIBC_2.4 (pthread_create.c:669)
+==7401==    by 0x5B36E7F: uv_thread_create (in /usr/lib/arm-linux-gnueabihf/libuv.so.1.0.0)
+==7401== 
+==7401== 768 bytes in 1 blocks are still reachable in loss record 182 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x53442C7: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 800 bytes in 1 blocks are still reachable in loss record 183 of 231
+==7401==    at 0x4848A40: operator new[](unsigned int, std::nothrow_t const&) (vg_replace_malloc.c:470)
+==7401==    by 0x5294093: v8::internal::TypedSlotSet::TypedSlot* v8::internal::NewArray<v8::internal::TypedSlotSet::TypedSlot>(unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 840 bytes in 30 blocks are still reachable in loss record 184 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52DF773: v8::internal::Page::AllocateFreeListCategories() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 864 bytes in 141 blocks are possibly lost in loss record 185 of 231
+==7401==    at 0x4848A40: operator new[](unsigned int, std::nothrow_t const&) (vg_replace_malloc.c:470)
+==7401==    by 0x530749B: v8::internal::MachineType* v8::internal::NewArray<v8::internal::MachineType>(unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 880 bytes in 20 blocks are still reachable in loss record 186 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB53AF: node::options_parser::OptionsParser<node::EnvironmentOptions>::AddOption(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, bool node::EnvironmentOptions::*, node::options_parser::OptionEnvvarSettings) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 984 bytes in 1 blocks are still reachable in loss record 187 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A1D83: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 1,024 bytes in 2 blocks are still reachable in loss record 188 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DC560F: std::_Deque_base<std::unique_ptr<v8::Task, std::default_delete<v8::Task> >, std::allocator<std::unique_ptr<v8::Task, std::default_delete<v8::Task> > > >::_M_initialize_map(unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 1,040 bytes in 2 blocks are still reachable in loss record 189 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5285A8B: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 1,160 bytes in 12 blocks are still reachable in loss record 190 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DABEDB: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 1,272 bytes in 34 blocks are still reachable in loss record 191 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB48BF: void std::__detail::_Insert_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_range<std::__detail::_Node_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, false, true>, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, true> > > >(std::__detail::_Node_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, false, true>, std::__detail::_Node_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, false, true>, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, true> > > const&, std::integral_constant<bool, true>) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 1,320 bytes in 33 blocks are still reachable in loss record 192 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB6FD7: void node::options_parser::OptionsParser<node::PerIsolateOptions>::Insert<node::EnvironmentOptions>(node::options_parser::OptionsParser<node::EnvironmentOptions>*, node::EnvironmentOptions* (node::PerIsolateOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 1,496 bytes in 34 blocks are still reachable in loss record 193 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB4857: void std::__detail::_Insert_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_range<std::__detail::_Node_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, false, true>, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, true> > > >(std::__detail::_Node_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, false, true>, std::__detail::_Node_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, false, true>, std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, true> > > const&, std::integral_constant<bool, true>) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 1,536 bytes in 3 blocks are still reachable in loss record 194 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B33BF: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 1,560 bytes in 39 blocks are still reachable in loss record 195 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB7DAF: void node::options_parser::OptionsParser<node::PerProcessOptions>::Insert<node::PerIsolateOptions>(node::options_parser::OptionsParser<node::PerIsolateOptions>*, node::PerIsolateOptions* (node::PerProcessOptions::*)()) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 1,580 bytes in 141 blocks are possibly lost in loss record 196 of 231
+==7401==    at 0x4848A40: operator new[](unsigned int, std::nothrow_t const&) (vg_replace_malloc.c:470)
+==7401==    by 0x5305E83: v8::internal::CallInterfaceDescriptorData::InitializePlatformSpecific(int, v8::internal::Register const*, v8::internal::PlatformInterfaceDescriptor*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,048 bytes in 1 blocks are still reachable in loss record 197 of 231
+==7401==    at 0x4848A40: operator new[](unsigned int, std::nothrow_t const&) (vg_replace_malloc.c:470)
+==7401==    by 0x53622EB: v8::internal::Log::Log(v8::internal::Logger*, char const*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,112 bytes in 8 blocks are still reachable in loss record 198 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B3037: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,112 bytes in 8 blocks are still reachable in loss record 199 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B3053: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,112 bytes in 8 blocks are still reachable in loss record 200 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B3093: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,112 bytes in 8 blocks are still reachable in loss record 201 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B30AF: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,112 bytes in 8 blocks are still reachable in loss record 202 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B30EF: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,112 bytes in 8 blocks are still reachable in loss record 203 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B310B: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,112 bytes in 8 blocks are still reachable in loss record 204 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B314B: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,112 bytes in 8 blocks are still reachable in loss record 205 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B3167: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,112 bytes in 8 blocks are still reachable in loss record 206 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B31A7: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,112 bytes in 8 blocks are still reachable in loss record 207 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B31C3: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,344 bytes in 18 blocks are still reachable in loss record 208 of 231
+==7401==    at 0x4847690: malloc (vg_replace_malloc.c:309)
+==7401==    by 0x5CCC723: CRYPTO_zalloc (in /usr/lib/arm-linux-gnueabihf/libcrypto.so.1.1)
+==7401== 
+==7401== 2,376 bytes in 33 blocks are still reachable in loss record 209 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB505F: std::pair<std::__detail::_Node_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::EnvironmentOptions>::OptionInfo>, false, true>, bool> std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::EnvironmentOptions>::OptionInfo>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::EnvironmentOptions>::OptionInfo> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_emplace<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, node::options_parser::OptionsParser<node::EnvironmentOptions>::OptionInfo>(std::integral_constant<bool, true>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, node::options_parser::OptionsParser<node::EnvironmentOptions>::OptionInfo&&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 2,808 bytes in 39 blocks are still reachable in loss record 210 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB5D53: std::pair<std::__detail::_Node_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::PerIsolateOptions>::OptionInfo>, false, true>, bool> std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::PerIsolateOptions>::OptionInfo>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::PerIsolateOptions>::OptionInfo> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_emplace<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, node::options_parser::OptionsParser<node::PerIsolateOptions>::OptionInfo>(std::integral_constant<bool, true>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, node::options_parser::OptionsParser<node::PerIsolateOptions>::OptionInfo&&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 3,072 bytes in 1 blocks are still reachable in loss record 211 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5344283: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 3,084 bytes in 1 blocks are still reachable in loss record 212 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x53444CF: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 3,092 bytes in 1 blocks are still reachable in loss record 213 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x5344307: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 3,392 bytes in 1 blocks are possibly lost in loss record 214 of 231
+==7401==    at 0x4848728: operator new[](unsigned int) (vg_replace_malloc.c:427)
+==7401==    by 0x534446F: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4,032 bytes in 56 blocks are still reachable in loss record 215 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DB5707: std::pair<std::__detail::_Node_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::PerProcessOptions>::OptionInfo>, false, true>, bool> std::_Hashtable<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::PerProcessOptions>::OptionInfo>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, node::options_parser::OptionsParser<node::PerProcessOptions>::OptionInfo> >, std::__detail::_Select1st, std::equal_to<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::hash<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_emplace<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, node::options_parser::OptionsParser<node::PerProcessOptions>::OptionInfo>(std::integral_constant<bool, true>, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, node::options_parser::OptionsParser<node::PerProcessOptions>::OptionInfo&&) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4,108 bytes in 5 blocks are still reachable in loss record 216 of 231
+==7401==    at 0x4848A40: operator new[](unsigned int, std::nothrow_t const&) (vg_replace_malloc.c:470)
+==7401==    by 0x500D323: v8::internal::Object** v8::internal::NewArray<v8::internal::Object*>(unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4,124 bytes in 1 blocks are still reachable in loss record 217 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52DE89F: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4,160 bytes in 8 blocks are still reachable in loss record 218 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B3203: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4,160 bytes in 8 blocks are still reachable in loss record 219 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B322F: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4,160 bytes in 8 blocks are still reachable in loss record 220 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B3283: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4,160 bytes in 8 blocks are still reachable in loss record 221 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52B32AF: v8::internal::MarkCompactCollector::MarkCompactCollector(v8::internal::Heap*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4,208 bytes in 1 blocks are still reachable in loss record 222 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A20A3: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 4,372 bytes in 1 blocks are still reachable in loss record 223 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x52A1D2F: v8::internal::Heap::SetUp() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 6,121 bytes in 178 blocks are still reachable in loss record 224 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4DABF9B: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 16,384 bytes in 1 blocks are still reachable in loss record 225 of 231
+==7401==    at 0x4847690: malloc (vg_replace_malloc.c:309)
+==7401==    by 0x4EF616B: ??? (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 20,484 bytes in 1 blocks are still reachable in loss record 226 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x534431B: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 25,432 bytes in 1 blocks are still reachable in loss record 227 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x4F12C4B: v8::Isolate::Allocate() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 30,724 bytes in 1 blocks are still reachable in loss record 228 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x53443F3: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 30,724 bytes in 1 blocks are still reachable in loss record 229 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x534440B: v8::internal::Isolate::Init(v8::internal::StartupDeserializer*) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 38,480 bytes in 1 blocks are still reachable in loss record 230 of 231
+==7401==    at 0x4847E78: operator new(unsigned int) (vg_replace_malloc.c:338)
+==7401==    by 0x533F217: v8::internal::Isolate::InitializeCounters() (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== 293,392 bytes in 19 blocks are still reachable in loss record 231 of 231
+==7401==    at 0x4847690: malloc (vg_replace_malloc.c:309)
+==7401==    by 0x4EF6E3B: v8::internal::AllocWithRetry(unsigned int) (in /usr/lib/arm-linux-gnueabihf/libnode.so.64)
+==7401== 
+==7401== LEAK SUMMARY:
+==7401==    definitely lost: 0 bytes in 0 blocks
+==7401==    indirectly lost: 0 bytes in 0 blocks
+==7401==      possibly lost: 6,596 bytes in 288 blocks
+==7401==    still reachable: 578,007 bytes in 1,073 blocks
+==7401==         suppressed: 0 bytes in 0 blocks
+==7401== 
+==7401== Use --track-origins=yes to see where uninitialised values come from
+==7401== For lists of detected and suppressed errors, rerun with: -s
+==7401== ERROR SUMMARY: 17621 errors from 106 contexts (suppressed: 0 from 0)

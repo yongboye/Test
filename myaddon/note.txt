@@ -1,0 +1,241 @@
+科拓软件叶永波
+qq:2561019481
+ps:keytop123
+
+paybyself
+qq:1124758659 
+ps:keytop123
+
+newpaybyself
+qq:2786108607
+ps:keytop123
+
+q群:164790616
+
+q企:yeyongbo@rd.keytop.com.cn
+psw:keytop123456
+KeyTop@201588
+Abc@142
+
+keytop-wifi
+keytop888888
+
+域:yeyongbo
+ps:123456
+
+oa:叶永波
+ps:keytop123
+
+自学禅道
+文档：http://www.zentao.net/book/zentaopmshelp/38.html
+视频：http://www.zentao.net/page/video.html
+禅道
+http://220.160.111.114:822/zentao/user-login.html
+yeyongbo@keytop.com.cn
+yeyongbo
+123456
+
+禅道new
+地址：http://192.168.16.145/
+用户名：名字的全拼（比如:jiangshaochun）
+密码：keytop123
+
+禅道new
+地址：http://10.1.10.154/biz/user-login-L2Jpei9teS5odG1s.html
+用户名：名字的全拼（比如:jiangshaochun）
+密码：keytop123
+
+showdoc
+url:http://220.160.111.118:4999/web/#/user/login?tdsourcetag=s_pctim_aiomsg
+user:叶永波
+pass:keytop123
+
+
+\\192.168.0.58
+administrator
+kt123456 
+
+192.168.0.33
+root
+123456
+
+http://192.168.0.58:8080/kt_login/index.aspx
+admin
+123123
+
+811
+\\192.168.0.58\ParkingCharge\FindCarSystem
+8080
+\\192.168.0.58\ParkingCharge
+
+http://192.168.0.31:8098/kt_login/login.aspx
+
+江宁金鹰TV
+967022987
+
+http://220.160.111.114:81/redmine/
+yeyongbo
+keytop123
+
+www.xywy.com
+tel
+5...
+
+vmware 
+yeyongbo@rd.keytop.com.cn
+Keytop123@
+
+Oracle VM VirtualBox
+yyb
+1
+
+dupn8888 
+503038
+
+YYBUbuntu
+F:\YYBUbuntu\YYBUbuntu
+C:\Users\yeyongbo\Documents\Virtual Machines\Ubuntu 64 位 (2)
+F:\debian\debian
+pwd:1
+
+风筝：
+http://yun.keytop.cn/kite/page/index.html
+qilh/123456
+yeyongbo/123456
+
+
+Bitvise SSH Client
+10.1.6.53 22
+kt1/kt123456
+
+10.1.0.95 22
+keytop/kt123456
+
+
+
+Nuget
+https://hk.saowen.com/a/7e6093df0e338264ce424a25fbd43d097c3d2603a76447c0cc935cadfe483d9c?tdsourcetag=s_pctim_aiomsg
+
+http://10.1.6.105:18081/nexus/
+http://10.1.6.105:18081/nexus/repository/kt_dotNetPaymentLibrary/
+dotNetDeployment
+Keytop:wabjtam!
+data:
+ye
+yongbo
+yeyongbo@rd.keytop.com.cn
+
+
+序号	外网端口	外网IP	内网IP	内网端口	使用部门
+32	11644	220.160.111.118	10.1.6.44	3389	软件一部
+65	8643	220.160.111.118	10.1.6.44	8643	软件一部
+				10.1.6.44   8078
+
+
+分机号：8872
+
+
+
+github
+2561019481@qq.com
+
+
+redis
+redis-cli.exe -h 127.0.0.1 -p 6379
+redis.windows.conf
+requirepass 123456
+redis.windows-service.conf
+requirepass 456123
+
+
+nextcloud
+yeyongbo
+yeyongbo123456
+
+
+
+共享
+共享盘 (\\10.1.1.11)
+Aa123123
+
+
+
+大物业
+keytopAdmin	
+keytop123
+
+
+
+adb
+C:\Users\yeyongbo\AppData\Local\Android\Sdk\platform-tools\abd.exe
+
+C:\Users\yeyongbo>adb shell
+root@rk3188:/ #
+adb push F:\testv77e\abi /data/yyb/testv77e/abi
+
+1、adb kill-server来杀死adb进程，然后再使用adb start-server命令来开启； 
+
+2、检测5037端口（adb.exe默认端口）是否被占用，关闭除adb.exe以外占用了5037端口的进程，重新开启adb服务： 
+
+2.1、adb nodaemon server：检测5037端口是否被占用； 
+
+2.2、netstat -ano | findstr “5037”：查看是什么进程占用了5037端口； 
+
+2.3、tasklist | findstr “21152”：查看这个进程是由哪个程序创建的（21152就是占用5037端口的一个进程的PID）； 
+
+2.4、taskkill /f /pid 21152：将进程关掉； 
+
+2.5、adb devices：显示当前连接设备。 
+3.adb push 电脑文件路径 手机存储路径
+
+
+
+
+
+cygwin:
+open cygwnterminal
+/cygdrive/c/cygwin/home/yeyongbo
+cd c:
+cd /cygdrive/c
+/cygdrive=我的电脑
+
+tinyxml:
+C:\cygwin\home\yeyongbo\tinyxml
+
+iconv:
+C:\Program Files (x86)\GnuWin32\include
+C:\Program Files (x86)\GnuWin32\lib
+libcharset.lib
+libiconv.lib
+
+
+raspberry
+remote:sudo apt-get install xrdp
+sudo apt-get install aptitude
+//aptitude search boost
+sudo aptitude install libboost-log-dev
+sudo aptitude install libboost-program-options-dev
+
+node-gyp rebuild
+node-gyp rebuild --dist-url=https://electronjs.org/headers --target=5.0.12 --verbose --arch=ia32
+valgrind --tool=memcheck --leak-check=full node index.js
+node
+>>process.arch
+
+
+npm install nrm
+nrm add ktnpm http://10.1.6.105:10243
+nrm ls
+nrm use ktnpm
+npm install ktlog
+
+npm adduser --registry http://10.1.6.105:10243
+yeyongbo
+raspberry
+npm publish
+npm init生成package.json
+
+
+gitlab
+yeyongbo
+yeyongbo

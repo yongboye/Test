@@ -1,0 +1,11 @@
+2021-03-29 22:40:32: <   info> RFMCard: (2314) : IRFM_init start
+2021-03-29 22:40:32: <   info> RFMCard: (2314) : 开始打开keya.txt文件
+2021-03-29 22:40:32: <   info> RFMCard: (2314) : open keya.txt succ
+2021-03-29 22:40:32: <   info> RFMCard: (2314) : 开始读取keya.txt文件
+2021-03-29 22:40:32: <   info> RFMCard: (2314) : 结束读取keya.txt文件
+2021-03-29 22:40:33: <   info> RFMCard: (2314) : 开始赋值keya
+2021-03-29 22:40:33: <   info> RFMCard: (2314) : 结束赋值keya
+2021-03-29 22:40:33: <   info> RFMCard: (2314) : RFMCard初始化,关闭串口
+2021-03-29 22:40:33: <   info> RFMCard: (2314) : RFMCard初始化,打开串口：COM1
+2021-03-29 22:40:33: <warning> RFMCard: (2314) : init open rfm iccard exception reason:open: 系统找不到指定的文件。
+2021-03-29 22:40:33: <   info> RFMCard: (2314) : IRFM_init,open RFM com:0/COM1 fail

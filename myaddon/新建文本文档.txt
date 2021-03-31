@@ -1,0 +1,249 @@
+void  v77e_poll(int *needLen, int *recvLen, int *recvLenLst, unsigned char* recvData)
+{
+	CICTcashinClass *inst = CICTcashinClass::instance();
+	if (inst == NULL)
+		return;
+
+	if (g_bUpgrade)
+	{
+		LogWarn(0, "轮询失败，固件升级中");
+		return;
+	}
+
+	inst->ictcashin_poll(needLen, recvLen, recvLenLst, recvData);
+}
+
+void CICTcashinClass::ictcashin_poll(int *needLen, int *recvLen, int *recvLenLst, unsigned char* recvData)
+{
+	boost::mutex::scoped_lock lock(m_mutex);
+	char logbuf[4096] = { 0 };
+	if (!getupgrade())
+	{
+		if (reconn())
+		{
+			status();
+
+			boost::this_thread::sleep(boost::posix_time::milliseconds(50));
+			try {
+				(*recvLen) += (int)m_serial.read(0, (char*)(recvData + (*recvLen)), (*needLen) - (*recvLen));
+			}
+			catch (...) {
+				LogWarn(0, "ictcashin_poll read exception");
+			}
+
+			if ((*recvLenLst) != (*recvLen))
+			{
+				(*recvLenLst) = (*recvLen);
+				memset(logbuf, 0, sizeof(logbuf));
+				hextostr(logbuf, recvData, (*recvLen));
+				LogInfo(1, "poll <== " << logbuf);
+			}
+
+			if ((*recvLen) == (*needLen))
+			{
+				if (recvData[0] == 0x81 && (*recvLen) == 1)
+				{
+					(*needLen) = 3;
+					return;
+				}
+				else if (recvData[0] == 0x81 && (*recvLen) == 3) //81 8f 40~44
+				{
+					switch (recvData[2]) {
+					case 0x40:	//1元
+						if ((m_inhibit & 0x0001) == 0x0001) {
+							if (accept()) {
+								m_event_handler(-43, 1, 1);
+								LogInfo(1, "ictcashin Run accept 1 yuan");
+							}
+						}
+						else {
+							if (reject()) {
+								m_event_handler(-45, 1, 1);
+								LogInfo(1, "ictcashin Run reject 1 yuan");
+							}
+						}
+						break;
+					case 0x41:	//5元
+						if ((m_inhibit & 0x0002) == 0x0002) {
+							if (accept()) {
+								m_event_handler(-43, 5, 1);
+								LogInfo(1, "ictcashin Run accept 5 yuan");
+							}
+						}
+						else {
+							if (reject()) {
+								m_event_handler(-45, 5, 1);
+								LogInfo(1, "ictcashin Run reject 5 yuan");
+							}
+						}
+						break;
+					case 0x42:	//10元
+						if ((m_inhibit & 0x0004) == 0x0004) {
+							if (accept()) {
+								m_event_handler(-43, 10, 1);
+								LogInfo(1, "ictcashin Run accept 10 yuan");
+							}
+						}
+						else {
+							if (reject()) {
+								m_event_handler(-45, 10, 1);
+								LogInfo(1, "ictcashin Run reject 10 yuan");
+							}
+						}
+						break;
+					case 0x43:	//20元
+						if ((m_inhibit & 0x0008) == 0x0008) {
+							if (accept()) {
+								m_event_handler(-43, 20, 1);
+								LogInfo(1, "ictcashin Run accept 20 yuan");
+							}
+						}
+						else {
+							if (reject()) {
+								m_event_handler(-45, 20, 1);
+								LogInfo(1, "ictcashin Run reject 20 yuan");
+							}
+						}
+						break;
+					case 0x44:	//50元
+						if ((m_inhibit & 0x0010) == 0x0010) {
+							if (accept()) {
+								m_event_handler(-43, 50, 1);
+								LogInfo(1, "ictcashin Run accept 50 yuan");
+							}
+						}
+						else {
+							if (reject()) {
+								m_event_handler(-45, 50, 1);
+								LogInfo(1, "ictcashin Run reject 50 yuan");
+							}
+						}
+						break;
+					case 0x45:	//100元
+						if ((m_inhibit & 0x0020) == 0x0020) {
+							if (accept()) {
+								m_event_handler(-43, 100, 1);
+								LogInfo(1, "ictcashin Run accept 100 yuan");
+							}
+						}
+						else {
+							if (reject()) {
+								m_event_handler(-45, 100, 1);
+								LogInfo(1, "ictcashin Run reject 100 yuan");
+							}
+						}
+						break;
+					}
+				}
+				else if (recvData[0] == 0x80 && (*recvLen) == 1)
+				{
+					(*needLen) = 2;
+					return;
+				}
+				else if (recvData[0] == 0x80 && (*recvLen) == 2) //80 8f
+				{
+					//m_reset_flag = 1;
+					ack();
+				}
+				else if (recvData[0] == 0x83 && (*recvLen) == 1)
+				{
+					(*needLen) = 2;
+					return;
+				}
+				else if (recvData[0] == 0x83 && (*recvLen) == 2) //83 3f~4f
+				{
+					switch (recvData[2]) {
+					case 0x3f:	//unknown bill type jam
+						break;
+					case 0x40:	//1元
+						m_event_handler(-48, 1, 1);
+						LogInfo(1, "ictcashin Run jam 100 yuan");
+						break;
+					case 0x41:	//5元
+						m_event_handler(-48, 5, 1);
+						LogInfo(1, "ictcashin Run jam 100 yuan");
+						break;
+					case 0x42:	//10元
+						m_event_handler(-48, 10, 1);
+						LogInfo(1, "ictcashin Run jam 100 yuan");
+						break;
+					case 0x43:	//20元
+						m_event_handler(-48, 20, 1);
+						LogInfo(1, "ictcashin Run jam 100 yuan");
+						break;
+					case 0x44:	//50元
+						m_event_handler(-48, 50, 1);
+						LogInfo(1, "ictcashin Run jam 100 yuan");
+						break;
+					case 0x45:	//100元
+						m_event_handler(-48, 100, 1);
+						LogInfo(1, "ictcashin Run jam 100 yuan");
+						break;
+					}
+				}
+				else if ((*recvLen) == 1)
+				{
+					switch (recvData[0])
+					{
+					case 0x20:
+						m_event_handler(-81, 0, 0);
+						break;
+					case 0x21:
+						m_event_handler(-82, 0, 0);
+						break;
+					case 0x22:
+						m_event_handler(-83, 0, 0);
+						break;
+					case 0x23:
+						m_event_handler(-84, 0, 0);
+						break;
+					case 0x24:
+						m_event_handler(-85, 0, 0);
+						break;
+					case 0x25:
+						m_event_handler(-86, 0, 0);
+						break;
+					case 0x27:
+						m_event_handler(-87, 0, 0);
+						break;
+					case 0x28:
+						m_event_handler(-88, 0, 0);
+						break;
+					case 0x29:
+						m_event_handler(-89, 0, 0);
+						break;
+					case 0x2a:
+						m_event_handler(-90, 0, 0);
+						break;
+					case 0x2e:
+						m_event_handler(-91, 0, 0);
+						break;
+					case 0x2f:
+						m_event_handler(-92, 0, 0);
+						break;
+					case 0x3E: //enable
+						m_enable_flag = 1;
+						m_event_handler(-93, 0, 0);
+						break;
+					case 0x5E: //disable
+						m_enable_flag = 0;
+						m_event_handler(-94, 0, 0);
+						break;
+					case 0x71:
+						m_event_handler(-95, 0, 0);
+						break;
+					case 0xa1:
+						m_event_handler(-96, 0, 0);
+						break;
+					}
+				}
+
+				(*needLen) = 1;
+				(*recvLen) = 0;
+				(*recvLenLst) = 0;
+				memset(recvData, 0x00, sizeof(recvData));
+			} //end if ((*recvLen) == (*needLen))
+		} //end if (reconn())
+	} //end if (!getupgrade())
+	return;
+}

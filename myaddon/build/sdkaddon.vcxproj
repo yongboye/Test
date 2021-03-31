@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BE21AA56-56EF-023A-DC34-FDD7A56F01E5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>sdkaddon</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\bin\;$(MSBuildProjectDirectory)\..\bin\</ExecutablePath>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.node</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.node</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.node</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.node</TargetExt>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName).node</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\include\node;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\src;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\openssl\config;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\openssl\openssl\include;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\uv\include;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\zlib;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\v8\include;D:\golang\myaddon\node_modules\node-addon-api;D:\golang\myaddon\sdk2_1\sdk2_1;D:\golang\logger;D:\golang\jsoncpp-src-0.5.0\include;E:\192.168.6.44\boost_1_68_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4355;4800;4251;4275;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>false</OmitFramePointers>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=sdkaddon;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;OPENSSL_NO_PINSHARED;OPENSSL_THREADS;NAPI_CPP_EXCEPTIONS;BUILDING_NODE_EXTENSION;HOST_BINARY=&quot;node.exe&quot;;DEBUG;_DEBUG;V8_ENABLE_CHECKS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/LTCG:INCREMENTAL %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;DelayImp.lib;&quot;C:\\Users\\Administrator\\AppData\\Local\\node-gyp\\Cache\\12.14.0\\ia32\\node.lib&quot;;D:\golang\myaddon\sdk2_1\Release\sdk2_1.lib;D:\golang\logger\Release\logger.lib;D:\golang\jsoncpp-src-0.5.0\build\vs71\release\lib_json\json_vc71_libmt.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\golang\myaddon\sdk2_1\Release;D:\golang\logger\Release;D:\golang\jsoncpp-src-0.5.0\build\vs71\release\lib_json;E:\192.168.6.44\boost_1_68_0\build\vc140\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/LTCG:INCREMENTAL /ignore:4199 %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>node.exe;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(ProjectName).node</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetExt>.node</TargetExt>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\include\node;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\src;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\openssl\config;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\openssl\openssl\include;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\uv\include;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\zlib;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\v8\include;D:\golang\myaddon\node_modules\node-addon-api;D:\golang\myaddon\sdk2_1\sdk2_1;D:\golang\logger;D:\golang\jsoncpp-src-0.5.0\include;E:\192.168.6.44\boost_1_68_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=sdkaddon;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;OPENSSL_NO_PINSHARED;OPENSSL_THREADS;NAPI_CPP_EXCEPTIONS;BUILDING_NODE_EXTENSION;HOST_BINARY=&quot;node.exe&quot;;DEBUG;_DEBUG;V8_ENABLE_CHECKS;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\include\node;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\src;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\openssl\config;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\openssl\openssl\include;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\uv\include;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\zlib;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\v8\include;D:\golang\myaddon\node_modules\node-addon-api;D:\golang\myaddon\sdk2_1\sdk2_1;D:\golang\logger;D:\golang\jsoncpp-src-0.5.0\include;E:\192.168.6.44\boost_1_68_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/EHsc %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4355;4800;4251;4275;4244;4267;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=sdkaddon;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;OPENSSL_NO_PINSHARED;OPENSSL_THREADS;NAPI_CPP_EXCEPTIONS;BUILDING_NODE_EXTENSION;HOST_BINARY=&quot;node.exe&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/LTCG:INCREMENTAL %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;DelayImp.lib;&quot;C:\\Users\\Administrator\\AppData\\Local\\node-gyp\\Cache\\12.14.0\\ia32\\node.lib&quot;;D:\golang\myaddon\sdk2_1\Release\sdk2_1.lib;D:\golang\logger\Release\logger.lib;D:\golang\jsoncpp-src-0.5.0\build\vs71\release\lib_json\json_vc71_libmt.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\golang\myaddon\sdk2_1\Release;D:\golang\logger\Release;D:\golang\jsoncpp-src-0.5.0\build\vs71\release\lib_json;E:\192.168.6.44\boost_1_68_0\build\vc140\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/LTCG:INCREMENTAL /ignore:4199 %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>node.exe;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(ProjectName).node</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetExt>.node</TargetExt>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\include\node;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\src;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\openssl\config;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\openssl\openssl\include;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\uv\include;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\zlib;C:\Users\Administrator\AppData\Local\node-gyp\Cache\12.14.0\deps\v8\include;D:\golang\myaddon\node_modules\node-addon-api;D:\golang\myaddon\sdk2_1\sdk2_1;D:\golang\logger;D:\golang\jsoncpp-src-0.5.0\include;E:\192.168.6.44\boost_1_68_0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=sdkaddon;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;OPENSSL_NO_PINSHARED;OPENSSL_THREADS;NAPI_CPP_EXCEPTIONS;BUILDING_NODE_EXTENSION;HOST_BINARY=&quot;node.exe&quot;;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\binding.gyp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Json.cpp">
+      <ObjectFileName>$(IntDir)\Json.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\sdkaddon.cc">
+      <ObjectFileName>$(IntDir)\sdkaddon.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\tools.cpp">
+      <ObjectFileName>$(IntDir)\tools.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\ticketsensor_generation.cpp">
+      <ObjectFileName>$(IntDir)\ticketsensor_generation.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\cashin_nv9.cpp">
+      <ObjectFileName>$(IntDir)\cashin_nv9.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\cash_in_v77e.cpp">
+      <ObjectFileName>$(IntDir)\cash_in_v77e.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="D:\nodejs\node_global\node_modules\node-gyp\src\win_delay_load_hook.cc"/>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\golang\generationsEpsonwithoutThread\Release\generationsEpson.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;..\build\Release&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;D:\golang\generationsEpsonwithoutThread\Release\generationsEpson.dll&quot; &quot;..\build\Release\generationsEpson.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying D:/golang/generationsEpsonwithoutThread/Release/generationsEpson.dll to ..\build\Release</Message>
+      <Outputs>..\build\Release\generationsEpson.dll</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="D:\golang\libRFMCardV3withoutThread\Release\libRFMCardV3.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;..\build\Release&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;D:\golang\libRFMCardV3withoutThread\Release\libRFMCardV3.dll&quot; &quot;..\build\Release\libRFMCardV3.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying D:/golang/libRFMCardV3withoutThread/Release/libRFMCardV3.dll to ..\build\Release</Message>
+      <Outputs>..\build\Release\libRFMCardV3.dll</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="D:\golang\libEleCtlLock\Release\libEleCtlLock.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;..\build\Release&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;D:\golang\libEleCtlLock\Release\libEleCtlLock.dll&quot; &quot;..\build\Release\libEleCtlLock.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying D:/golang/libEleCtlLock/Release/libEleCtlLock.dll to ..\build\Release</Message>
+      <Outputs>..\build\Release\libEleCtlLock.dll</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="D:\golang\ictcashinwithoutThread\libICTcashin\Release\libICTcashin.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;..\build\Release&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;D:\golang\ictcashinwithoutThread\libICTcashin\Release\libICTcashin.dll&quot; &quot;..\build\Release\libICTcashin.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying D:/golang/ictcashinwithoutThread/libICTcashin/Release/libICTcashin.dll to ..\build\Release</Message>
+      <Outputs>..\build\Release\libICTcashin.dll</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="D:\golang\libRPDCardV1withoutThread\Release\libRPDCardV1.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;..\build\Release&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;D:\golang\libRPDCardV1withoutThread\Release\libRPDCardV1.dll&quot; &quot;..\build\Release\libRPDCardV1.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying D:/golang/libRPDCardV1withoutThread/Release/libRPDCardV1.dll to ..\build\Release</Message>
+      <Outputs>..\build\Release\libRPDCardV1.dll</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="D:\golang\myaddon\sdk2_1\Release\sdk2_1.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;..\build\Release&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;D:\golang\myaddon\sdk2_1\Release\sdk2_1.dll&quot; &quot;..\build\Release\sdk2_1.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying D:/golang/myaddon/sdk2_1/Release/sdk2_1.dll to ..\build\Release</Message>
+      <Outputs>..\build\Release\sdk2_1.dll</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="D:\golang\libNV9withoutThread\Release\libNV9.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;..\build\Release&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;D:\golang\libNV9withoutThread\Release\libNV9.dll&quot; &quot;..\build\Release\libNV9.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying D:/golang/libNV9withoutThread/Release/libNV9.dll to ..\build\Release</Message>
+      <Outputs>..\build\Release\libNV9.dll</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="D:\golang\libSHtransportationcard\Release\libSHtransportationcard.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;..\build\Release&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;D:\golang\libSHtransportationcard\Release\libSHtransportationcard.dll&quot; &quot;..\build\Release\libSHtransportationcard.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying D:/golang/libSHtransportationcard/Release/libSHtransportationcard.dll to ..\build\Release</Message>
+      <Outputs>..\build\Release\libSHtransportationcard.dll</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="D:\golang\ThirdPartyLibraries\MasterRD.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;..\build\Release&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;D:\golang\ThirdPartyLibraries\MasterRD.dll&quot; &quot;..\build\Release\MasterRD.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying D:/golang/ThirdPartyLibraries/MasterRD.dll to ..\build\Release</Message>
+      <Outputs>..\build\Release\MasterRD.dll</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="D:\golang\libTicketSensor\libticketsensor\Release\libticketsensor.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;..\build\Release&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;D:\golang\libTicketSensor\libticketsensor\Release\libticketsensor.dll&quot; &quot;..\build\Release\libticketsensor.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying D:/golang/libTicketSensor/libticketsensor/Release/libticketsensor.dll to ..\build\Release</Message>
+      <Outputs>..\build\Release\libticketsensor.dll</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="D:\golang\ThirdPartyLibraries\MasterCom.dll">
+      <FileType>Document</FileType>
+      <Command>call mkdir &quot;..\build\Release&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;D:\golang\ThirdPartyLibraries\MasterCom.dll&quot; &quot;..\build\Release\MasterCom.dll&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying D:/golang/ThirdPartyLibraries/MasterCom.dll to ..\build\Release</Message>
+      <Outputs>..\build\Release\MasterCom.dll</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\node_modules\node-addon-api\src\nothing.vcxproj">
+      <Project>{EC5A8C59-F596-3863-123D-7BCA2F2CBB7A}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>

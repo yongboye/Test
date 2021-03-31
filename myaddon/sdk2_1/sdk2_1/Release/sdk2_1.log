@@ -1,0 +1,8 @@
+﻿  stdafx.cpp
+  dllmain.cpp
+  sdk2_1.cpp
+    正在创建库 D:\golang\myaddon\sdk2_1\Release\sdk2_1.lib 和对象 D:\golang\myaddon\sdk2_1\Release\sdk2_1.exp
+  正在生成代码
+  All 7 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  sdk2_1.vcxproj -> D:\golang\myaddon\sdk2_1\Release\sdk2_1.dll

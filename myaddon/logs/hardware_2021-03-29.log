@@ -1,0 +1,20 @@
+2021-03-29 22:40:32: <   info> hardware: (2314) : HardWareInit =>
+2021-03-29 22:40:32: <   info> hardware: (2314) : HardWareInit VER:WIN_KT_NJGYPCC_1.0.8
+2021-03-29 22:40:32: <   info> hardware: (2314) : dll path:
+2021-03-29 22:40:32: <   info> hardware: (2314) : D:/golang/myaddon/build/Release
+2021-03-29 22:40:32: <   info> hardware: (2314) : HardWareInit inijs:{"System":{"authorization_code":"754a0b2598ffa1839ea165829918396d1a06967e7de87304"}, 								   "CoinDevType":{"coin_type":"-1","national_cny":"1","serial_coin_in":"COM1","include_coin_out_half":"1","include_coin_out_one":"1","box_coin_out_one":"1","serial_coin_out_half":"2","serial_coin_out_one":"3"}, 								   "CashInDevType":{"cash_in_type":"-1","serial_cash_in":"COM1","cash_accept":"63","cash_model":"0"}, 								   "CashOutDevType":{"cash_out_type":"-1","serial_cash_out":"COM1","cashbox_num":"2","cashbox0_money_type":"20","cashbox1_money_type":"5","cashbox2_money_type":"-1","cashbox3_money_type":"-1","cashbox4_money_type":"-1","cashbox5_money_type":"-1","cashbox0_ID":"137","cashbox1_ID":"134","cashbox2_ID":"-1","cashbox3_ID":"-1","cashbox4_ID":"-1","cashbox5_ID":"-1","country_currentcy":"0"}, 								   "UnionDevType":{"union_type":"-1","serial_union":"COM1","union_zhongyu":"1","union_BsweepC":"0"}, 								   "PrinterDevType":{"printer_type":"-1","serial_printer":"COM1","baudrate_printer":"19200"}, 								   "ICcardDevType":{"iCcard_type":"0","serial_iccard":"COM1", "serial_Type":"0"}, 								   "SensorDevType":{"SensorDev_Type":"-1","serial_sensor":"COM1"}, 								   "TrafficDevType":{"traffic_type":"-1","serial_traffic":"COM1", "industrycode_traffic":"01", "usercode_traffic":"01", "deviceid_traffic":"01", "units_traffic":"01"}, 								   "LockDevType":{"LockDev_Type":"0","serial_lock":"COM1"} }
+2021-03-29 22:40:33: <   info> hardware: (2314) : HardWareInit result:{"data":[{"dev_name":"coin","init_msg":"不包含硬币器模块","init_result":false},{"dev_name":"printer","init_msg":"不包含打印机模块","init_result":false},{"dev_name":"traffic","init_msg":"不包含交通卡模块","init_result":false},{"dev_name":"icCard","init_msg":"IC读卡器初始化失败","init_result":false},{"dev_name":"sensor","init_msg":"锁初始化失败","init_result":false},{"dev_name":"sensor","init_msg":"不包含传感器模块","init_result":false},{"dev_name":"cashin","init_msg":"不包含纸币接收器模块","init_result":false}],"result_code":-1,"result_msg":"硬件初始化失败！"}
+
+2021-03-29 22:40:33: <   info> hardware: (2314) : TrafficEnable =>
+2021-03-29 22:40:33: <   info> hardware: (2314) : TrafficEnable(100) result:{"result_code":-39,"result_msg":"交通卡初始化失败","traffic_error_code":-2,"traffic_error_msg":"交通卡通讯失败"}
+
+2021-03-29 22:40:33: <   info> hardware: (2314) : TrafficReadLog =>
+2021-03-29 22:40:33: <   info> hardware: (2314) : TrafficReadLog() result:{"result_code":-39,"result_msg":"交通卡初始化失败","traffic_error_code":-2,"traffic_error_msg":"交通卡通讯失败"}
+
+2021-03-29 22:41:03: <   info> hardware: (2314) : HardWareEnd =>
+2021-03-29 22:41:03: <   info> hardware: (2314) : HardWareEnd => 1
+2021-03-29 22:41:03: <   info> hardware: (2314) : HardWareEnd => 2
+2021-03-29 22:41:03: <   info> hardware: (2314) : HardWareEnd => 3
+2021-03-29 22:41:03: <   info> hardware: (2314) : HardWareEnd => 4
+2021-03-29 22:41:03: <   info> hardware: (2314) : HardWareEnd result:{"result_code":0,"result_msg":"success"}
+

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\nodejs">
+      <UniqueIdentifier>{A3C8E949-BCF6-0C67-6656-340A2A097708}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\nodejs\node_global">
+      <UniqueIdentifier>{2710910E-5839-58EA-704A-D05043F6CE82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\nodejs\node_global\node_modules">
+      <UniqueIdentifier>{56DF7A98-063D-FB9D-485C-089023B4C16A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\nodejs\node_global\node_modules\node-gyp">
+      <UniqueIdentifier>{77348C0E-2034-7791-74D5-63C077DF5A3B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\nodejs\node_global\node_modules\node-gyp\src">
+      <UniqueIdentifier>{8CDEE807-BC53-E450-C8B8-4DEBB66742D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang">
+      <UniqueIdentifier>{01A81188-BCDD-241F-E6F1-85269CC0C4FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\myaddon">
+      <UniqueIdentifier>{0E80773A-B739-982C-C061-ACB63D2DF4EC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\myaddon\sdk2_1">
+      <UniqueIdentifier>{2FBA96C3-95E3-ABA9-47CC-6F146474C6C0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\myaddon\sdk2_1\Release">
+      <UniqueIdentifier>{FF075A12-C1E5-B72E-66FE-329E5E401639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang">
+      <UniqueIdentifier>{01A81188-BCDD-241F-E6F1-85269CC0C4FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libTicketSensor">
+      <UniqueIdentifier>{339E8F00-796B-F705-28E4-64FCB44E1EC9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libTicketSensor\libticketsensor">
+      <UniqueIdentifier>{3845B118-8A66-2831-CDDA-5B6C325CADB2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libTicketSensor\libticketsensor\Release">
+      <UniqueIdentifier>{FF075A12-C1E5-B72E-66FE-329E5E401639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang">
+      <UniqueIdentifier>{01A81188-BCDD-241F-E6F1-85269CC0C4FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libEleCtlLock">
+      <UniqueIdentifier>{3F162063-BEAE-68BA-A86D-B12C864EF18C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libEleCtlLock\Release">
+      <UniqueIdentifier>{FF075A12-C1E5-B72E-66FE-329E5E401639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang">
+      <UniqueIdentifier>{01A81188-BCDD-241F-E6F1-85269CC0C4FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libRPDCardV1withoutThread">
+      <UniqueIdentifier>{1806B99D-0A75-DD85-B1E2-6C2C5F44CF3E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libRPDCardV1withoutThread\Release">
+      <UniqueIdentifier>{FF075A12-C1E5-B72E-66FE-329E5E401639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang">
+      <UniqueIdentifier>{01A81188-BCDD-241F-E6F1-85269CC0C4FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libRFMCardV3withoutThread">
+      <UniqueIdentifier>{CEC08DB6-7D7C-CFCF-DA65-9C9BBD8004E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libRFMCardV3withoutThread\Release">
+      <UniqueIdentifier>{FF075A12-C1E5-B72E-66FE-329E5E401639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang">
+      <UniqueIdentifier>{01A81188-BCDD-241F-E6F1-85269CC0C4FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libSHtransportationcard">
+      <UniqueIdentifier>{3D9D7633-E8A5-F0D5-AA84-B6561403ACC8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libSHtransportationcard\Release">
+      <UniqueIdentifier>{FF075A12-C1E5-B72E-66FE-329E5E401639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang">
+      <UniqueIdentifier>{01A81188-BCDD-241F-E6F1-85269CC0C4FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\generationsEpsonwithoutThread">
+      <UniqueIdentifier>{D9E27EE5-6720-F936-0462-08D13ABE8003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\generationsEpsonwithoutThread\Release">
+      <UniqueIdentifier>{FF075A12-C1E5-B72E-66FE-329E5E401639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang">
+      <UniqueIdentifier>{01A81188-BCDD-241F-E6F1-85269CC0C4FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libNV9withoutThread">
+      <UniqueIdentifier>{35892993-BAB0-5650-7FDB-F5BD32E0C357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\libNV9withoutThread\Release">
+      <UniqueIdentifier>{FF075A12-C1E5-B72E-66FE-329E5E401639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang">
+      <UniqueIdentifier>{01A81188-BCDD-241F-E6F1-85269CC0C4FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\ictcashinwithoutThread">
+      <UniqueIdentifier>{1C41A17E-1E39-0722-01CC-907E3632C461}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\ictcashinwithoutThread\libICTcashin">
+      <UniqueIdentifier>{9FFA3B82-4AEC-ED04-3B08-2F10857EBEE0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\ictcashinwithoutThread\libICTcashin\Release">
+      <UniqueIdentifier>{FF075A12-C1E5-B72E-66FE-329E5E401639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang">
+      <UniqueIdentifier>{01A81188-BCDD-241F-E6F1-85269CC0C4FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\ThirdPartyLibraries">
+      <UniqueIdentifier>{4463A954-F43F-5157-1847-7CF52AFC8D5D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:">
+      <UniqueIdentifier>{E5D29F2B-0177-9942-CA95-0FF700094F89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang">
+      <UniqueIdentifier>{01A81188-BCDD-241F-E6F1-85269CC0C4FC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D:\golang\ThirdPartyLibraries">
+      <UniqueIdentifier>{4463A954-F43F-5157-1847-7CF52AFC8D5D}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Json.cpp">
+      <Filter>..</Filter>
+    </ClCompile>
+    <ClCompile Include="..\sdkaddon.cc">
+      <Filter>..</Filter>
+    </ClCompile>
+    <ClCompile Include="..\tools.cpp">
+      <Filter>..</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ticketsensor_generation.cpp">
+      <Filter>..</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cashin_nv9.cpp">
+      <Filter>..</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cash_in_v77e.cpp">
+      <Filter>..</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\nodejs\node_global\node_modules\node-gyp\src\win_delay_load_hook.cc">
+      <Filter>D:\nodejs\node_global\node_modules\node-gyp\src</Filter>
+    </ClCompile>
+    <None Include="..\binding.gyp">
+      <Filter>..</Filter>
+    </None>
+    <None Include="D:\golang\myaddon\sdk2_1\Release\sdk2_1.dll">
+      <Filter>D:\golang\myaddon\sdk2_1\Release</Filter>
+    </None>
+    <None Include="D:\golang\libTicketSensor\libticketsensor\Release\libticketsensor.dll">
+      <Filter>D:\golang\libTicketSensor\libticketsensor\Release</Filter>
+    </None>
+    <None Include="D:\golang\libEleCtlLock\Release\libEleCtlLock.dll">
+      <Filter>D:\golang\libEleCtlLock\Release</Filter>
+    </None>
+    <None Include="D:\golang\libRPDCardV1withoutThread\Release\libRPDCardV1.dll">
+      <Filter>D:\golang\libRPDCardV1withoutThread\Release</Filter>
+    </None>
+    <None Include="D:\golang\libRFMCardV3withoutThread\Release\libRFMCardV3.dll">
+      <Filter>D:\golang\libRFMCardV3withoutThread\Release</Filter>
+    </None>
+    <None Include="D:\golang\libSHtransportationcard\Release\libSHtransportationcard.dll">
+      <Filter>D:\golang\libSHtransportationcard\Release</Filter>
+    </None>
+    <None Include="D:\golang\generationsEpsonwithoutThread\Release\generationsEpson.dll">
+      <Filter>D:\golang\generationsEpsonwithoutThread\Release</Filter>
+    </None>
+    <None Include="D:\golang\libNV9withoutThread\Release\libNV9.dll">
+      <Filter>D:\golang\libNV9withoutThread\Release</Filter>
+    </None>
+    <None Include="D:\golang\ictcashinwithoutThread\libICTcashin\Release\libICTcashin.dll">
+      <Filter>D:\golang\ictcashinwithoutThread\libICTcashin\Release</Filter>
+    </None>
+    <None Include="D:\golang\ThirdPartyLibraries\MasterCom.dll">
+      <Filter>D:\golang\ThirdPartyLibraries</Filter>
+    </None>
+    <None Include="D:\golang\ThirdPartyLibraries\MasterRD.dll">
+      <Filter>D:\golang\ThirdPartyLibraries</Filter>
+    </None>
+  </ItemGroup>
+</Project>

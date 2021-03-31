@@ -1,0 +1,2 @@
+2021-03-29 22:40:33: <warning> eleCtlLock: (2314) : init open ElecCtlLock port:COM1 exception reason:open: 系统找不到指定的文件。
+2021-03-29 22:40:33: <  error> eleCtlLock: (2314) : [.\base\Logger.cpp:113]打开电控锁的串口失败
